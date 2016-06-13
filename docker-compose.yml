@@ -1,0 +1,5 @@
+app:
+  image: dockerreg.coltonoslund.cornerstonenw.com:5000/jenkins-1:latest
+  ports:
+    - "80:80"
+  container_name: astroids
