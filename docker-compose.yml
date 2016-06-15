@@ -1,4 +1,4 @@
 asteroids:
-  image: dockerreg.coltonoslund.cornerstonenw.com:5000/jenkins-1:latest
+  image: dockerreg.coltonoslund.cornerstonenw.com:5000/jenkins-1:$BUILD_NUMBER
   ports:
     - "80:80"
