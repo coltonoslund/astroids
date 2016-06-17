@@ -6,6 +6,10 @@ services:
     restart: always
     environment:
       - "affinity:container==ucp-swarm-manager"
+    environment:
+      - "constraint:node!=dtr"
+    environment:
+      - "constraint:node!=dockerdatacenter"
     ports:
       - "80:80"
     volumes:
