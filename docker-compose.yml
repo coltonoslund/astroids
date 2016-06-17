@@ -6,7 +6,6 @@ services:
     restart: always
     environment:
       - "affinity:container==ucp-swarm-manager"
-    environment:
       - "constraint:node==dockerone"
     ports:
       - "80:80"
