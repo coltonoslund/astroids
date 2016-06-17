@@ -7,9 +7,7 @@ services:
     environment:
       - "affinity:container==ucp-swarm-manager"
     environment:
-      - "constraint:node!=dtr"
-    environment:
-      - "constraint:node!=dockerdatacenter"
+      - "constraint:node==dockerone"
     ports:
       - "80:80"
     volumes:
