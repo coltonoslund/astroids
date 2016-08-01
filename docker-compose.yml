@@ -2,12 +2,6 @@ version: "2"
 services:
   asteroids:
     image: dockerreg.coltonoslund.cornerstonenw.com:5000/jenkins-1:$BUILD_NUMBER
-    command: "--swarm-url tcp://192.168.1.164:2376 --swarm-tls-ca-cert /data/ca.pem --swarm-tls-cert /data/cert.pem --swarm-tls-key /data/key.pem --plugin haproxy start"
     restart: always
-    environment:
-      - "affinity:container==ucp-swarm-manager"
-      - "constraint:node==dockerone"
     ports:
       - "80:80"
-    volumes:
-      - "/var/lib/docker/volumes/ucp-swarm-node-certs/_data:/data:ro"
