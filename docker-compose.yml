@@ -1,7 +1,0 @@
-version: "2"
-services:
-  asteroids:
-    image: dockerreg.colton.cornerstonenw.com:5000/asteroids
-    restart: always
-    ports:
-      - "8080:80"
